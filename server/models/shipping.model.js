@@ -20,9 +20,6 @@ const Shipping = sequelize.define('Shipping', {
     },
     City: {
         type: Sequelize.STRING
-    },
-    Days: {
-        type: Sequelize.INTEGER
     }
 }, {
     timestamps: false,

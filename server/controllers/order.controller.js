@@ -37,7 +37,7 @@ exports.addOrder = async(req, res) => {
 
 
         if (result) {
-            await Shipping.create({ name: shipping.name, Address1: shipping.addressLine1, Address2: shipping.addressLine2, City: shipping.city, Days: shipping.days, OrderId: order.get('id') })
+            await Shipping.create({ name: shipping.name, Address1: shipping.addressLine1, Address2: shipping.addressLine2, City: shipping.city, OrderId: order.get('id') })
             await cart.setProducts(null)
             res.send({ message: "Success" })
         }
